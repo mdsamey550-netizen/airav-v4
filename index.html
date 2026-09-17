@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, Zinia! 🎂</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div id="loading-screen">
+    <div class="loader-content">
+      <div class="loader-heart">
+        <div class="heart-pulse">💖</div>
+      </div>
+      <div class="loader-text">
+        <span>P</span><span>r</span><span>e</span><span>p</span><span>a</span><span>r</span><span>i</span><span>n</span><span>g</span>
+        <span>&nbsp;</span>
+        <span>S</span><span>o</span><span>m</span><span>e</span><span>t</span><span>h</span><span>i</span><span>n</span><span>g</span>
+        <span>&nbsp;</span>
+        <span>S</span><span>p</span><span>e</span><span>c</span><span>i</span><span>a</span><span>l</span>
+        <span>.</span><span>.</span><span>.</span>
+      </div>
+      <div class="loader-sparkles">✨ ✨ ✨</div>
+    </div>
+  </div>
+
+  <!-- ===== AUTOPLAY NOTICE ===== -->
+  <div id="autoplay-notice">
+    <div class="autoplay-inner">🎵 Tap anywhere to start the music</div>
+  </div>
+
+  <!-- ===== MUSIC BUTTON ===== -->
+  <button id="music-btn" aria-label="Toggle Music">
+    <span id="music-icon">🎵</span>
+    <span id="music-label">Music On</span>
+  </button>
+
+  <!-- ===== SAMYE WATERMARK ===== -->
+  <div id="watermark">♡ SAMYE</div>
+
+  <!-- ===== FLOATING PARTICLES ===== -->
+  <div id="particles-container"></div>
+  <div id="confetti-container"></div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════════
+         HERO SECTION
+    ════════════════════════════════════════════ -->
+    <section id="hero" class="hero-section">
+      <div class="hero-bg-image" style="background-image: url('photo1.jpg');"></div>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-floating-elements" aria-hidden="true">
+        <div class="float-balloon balloon-1">🎈</div>
+        <div class="float-balloon balloon-2">🎈</div>
+        <div class="float-balloon balloon-3">🎈</div>
+        <div class="float-heart fh-1">💖</div>
+        <div class="float-heart fh-2">💕</div>
+        <div class="float-heart fh-3">❤️</div>
+        <div class="float-star fs-1">⭐</div>
+        <div class="float-star fs-2">✨</div>
+        <div class="float-star fs-3">🌟</div>
+        <div class="float-sparkle sp-1">💫</div>
+        <div class="float-sparkle sp-2">💫</div>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-up delay-1">🎉 HAPPY BIRTHDAY 🎉</div>
+
+        <h1 class="hero-name animate-fade-up delay-2">
+          <span class="name-line">Zinia</span>
+          <span class="name-subline">(Airav)</span>
+        </h1>
+
+        <p class="hero-subtitle animate-fade-up delay-3">
+          Today is all about celebrating <span class="highlight">YOU!</span> ❤️✨
+        </p>
+
+        <!-- Animated Birthday Cake -->
+        <div class="hero-cake-wrap animate-fade-up delay-4">
+          <div class="cake-wrapper hero-cake">
+            <div class="cake-candles">
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+              <div class="candle"><div class="flame"></div></div>
+            </div>
+            <div class="cake-top"><div class="cake-decoration">🌸 🎀 🌸</div></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+            <div class="cake-plate"></div>
+          </div>
+        </div>
+
+        <button class="hero-btn animate-fade-up delay-5" id="open-surprise-btn">
+          🎁 Open Your Birthday Surprise
+        </button>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         BIRTHDAY MESSAGE SECTION
+    ════════════════════════════════════════════ -->
+    <section id="message-section" class="section">
+      <div class="section-inner">
+        <div class="section-title-wrap">
+          <h2 class="section-title reveal-on-scroll">💌 A Little Message For You</h2>
+          <div class="title-underline reveal-on-scroll"></div>
+        </div>
+
+        <div class="message-card glass-card reveal-on-scroll">
+          <div class="message-deco top-deco">💕 ✨ 💕</div>
+          <div id="typed-message" class="typed-text"></div>
+          <div class="message-signature">— With all my heart 💖</div>
+          <div class="message-deco bottom-deco">✨ 🎂 ✨</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MAKE A WISH SECTION
+    ════════════════════════════════════════════ -->
+    <section id="wish-section" class="section wish-bg">
+      <div class="section-inner">
+        <div class="section-title-wrap">
+          <h2 class="section-title reveal-on-scroll">🎂 Make a Wish 🎂</h2>
+          <div class="title-underline reveal-on-scroll"></div>
+        </div>
+
+        <div class="wish-content glass-card reveal-on-scroll">
+          <p class="wish-poem">
+            <span class="wish-line">Close your eyes...</span>
+            <span class="wish-line">Make your wish...</span>
+            <span class="wish-line">And let the magic begin. ✨</span>
+          </p>
+
+          <div class="wish-cake-wrapper">
+            <div class="cake-wrapper wish-cake" id="wish-cake">
+              <div class="cake-candles" id="wish-candles">
+                <div class="candle"><div class="flame wish-flame" id="wf1"></div></div>
+                <div class="candle"><div class="flame wish-flame" id="wf2"></div></div>
+                <div class="candle"><div class="flame wish-flame" id="wf3"></div></div>
+                <div class="candle"><div class="flame wish-flame" id="wf4"></div></div>
+                <div class="candle"><div class="flame wish-flame" id="wf5"></div></div>
+              </div>
+              <div class="cake-top"><div class="cake-decoration">🌸 🎀 🌸</div></div>
+              <div class="cake-middle"></div>
+              <div class="cake-bottom"></div>
+              <div class="cake-plate"></div>
+            </div>
+          </div>
+
+          <button class="wish-btn" id="wish-btn">✨ Make a Wish</button>
+          <div id="wish-result" class="wish-result">✨ Your wish will come true! ❤️</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MEMORIES SECTION
+    ════════════════════════════════════════════ -->
+    <section id="memories-section" class="section">
+      <div class="section-inner">
+        <div class="section-title-wrap">
+          <h2 class="section-title reveal-on-scroll">✨ Beautiful Memories</h2>
+          <div class="title-underline reveal-on-scroll"></div>
+        </div>
+
+        <div class="memories-grid">
+          <div class="memory-card glass-card reveal-on-scroll">
+            <div class="memory-img-wrap">
+              <img src="photo1.jpg" alt="Memory 1" class="memory-img" />
+              <div class="memory-img-glow"></div>
+            </div>
+            <div class="memory-caption">A beautiful memory ❤️</div>
+          </div>
+
+          <div class="memory-card glass-card reveal-on-scroll delay-2">
+            <div class="memory-img-wrap">
+              <img src="photo2.jpg" alt="Memory 2" class="memory-img" />
+              <div class="memory-img-glow"></div>
+            </div>
+            <div class="memory-caption">A beautiful memory ❤️</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WISH CARDS SECTION
+    ════════════════════════════════════════════ -->
+    <section id="wish-cards-section" class="section">
+      <div class="section-inner">
+        <div class="section-title-wrap">
+          <h2 class="section-title reveal-on-scroll">🌸 Birthday Wishes For You</h2>
+          <div class="title-underline reveal-on-scroll"></div>
+        </div>
+
+        <div class="wish-cards-grid">
+
+          <div class="wish-card glass-card reveal-on-scroll">
+            <div class="wish-card-icon">💖</div>
+            <h3 class="wish-card-title">Happiness</h3>
+            <p class="wish-card-text">
+              May your life always be filled with happiness,
+              laughter, and beautiful moments.
+            </p>
+          </div>
+
+          <div class="wish-card glass-card reveal-on-scroll delay-1">
+            <div class="wish-card-icon">🌸</div>
+            <h3 class="wish-card-title">Success</h3>
+            <p class="wish-card-text">
+              May you achieve every dream you work for
+              and reach everything you hope for.
+            </p>
+          </div>
+
+          <div class="wish-card glass-card reveal-on-scroll delay-2">
+            <div class="wish-card-icon">✨</div>
+            <h3 class="wish-card-title">Beautiful Memories</h3>
+            <p class="wish-card-text">
+              May every year bring you unforgettable memories
+              and countless reasons to smile.
+            </p>
+          </div>
+
+          <div class="wish-card glass-card reveal-on-scroll delay-3">
+            <div class="wish-card-icon">🎁</div>
+            <h3 class="wish-card-title">Love &amp; Joy</h3>
+            <p class="wish-card-text">
+              May your days always be surrounded by
+              people who genuinely care about you.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FINAL CELEBRATION SECTION
+    ════════════════════════════════════════════ -->
+    <section id="final-section" class="section final-section">
+      <div class="final-floating" aria-hidden="true">
+        <div class="final-balloon fb-1">🎈</div>
+        <div class="final-balloon fb-2">🎈</div>
+        <div class="final-balloon fb-3">🎈</div>
+        <div class="final-heart fheart-1">💖</div>
+        <div class="final-heart fheart-2">💕</div>
+        <div class="final-star fstar-1">⭐</div>
+        <div class="final-star fstar-2">✨</div>
+      </div>
+
+      <div class="section-inner final-inner">
+
+        <div class="final-title-wrap reveal-on-scroll">
+          <h2 class="final-title">🎂 HAPPY BIRTHDAY,</h2>
+          <h2 class="final-name">Airav! 🎂</h2>
+        </div>
+
+        <div class="final-heart-anim reveal-on-scroll delay-1">
+          <div class="big-heart">💖</div>
+        </div>
+
+        <div class="final-poem reveal-on-scroll delay-2">
+          <p>Keep smiling.</p>
+          <p>Keep shining.</p>
+          <p>Keep being <strong>YOU.</strong> ❤️</p>
+        </div>
+
+        <p class="final-love reveal-on-scroll delay-3">
+          With lots of love and best wishes 💕
+        </p>
+
+        <button class="celebrate-btn reveal-on-scroll delay-4" id="celebrate-btn">
+          🎉 Celebrate Again
+        </button>
+
+        <p class="creator-signature reveal-on-scroll delay-5">
+          Made with ❤️ by <strong>SAMYE</strong>
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== AUDIO ===== -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="happy-birthday.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
